@@ -54,4 +54,4 @@ docs/_build/
 target/
 
 # Runtime files
-*.py.swp
+*.swp
