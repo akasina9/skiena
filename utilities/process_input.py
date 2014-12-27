@@ -15,3 +15,19 @@ def get_numeric_list(): # {{{
 
     return input_list
 # }}}
+
+
+def get_number(): # {{{
+    '''
+    Get a number as input from command line
+    '''
+
+    import sys, ast
+
+    try:
+	num_value = ast.literal_eval(sys.argv[1])
+	return num_value
+    except Exception, e:
+	print "EXCEPTION:", e
+	return
+# }}}
