@@ -26,8 +26,6 @@ def get_ramanujan_numbers(max_value): # {{{
     ramanujan_numbers 	= []
     cube_dict 		= {}
 
-    for i in range(input_number**3):
-	cube_dict[i] 	= False
 
     for i in range(input_number):
 	cube_dict[i**3] = i
@@ -39,7 +37,7 @@ def get_ramanujan_numbers(max_value): # {{{
 		    d = a**3 + b**3 - c**3
 
 		    if a != d and b != d and c != d and d < input_number**3 and d >= c**3:
-			if cube_dict[d] != False:
+			if d in cube_dict:
 			    ramanujan_numbers.append((a, b, c, cube_dict[d], a**3 + b**3))
     
     return ramanujan_numbers
